@@ -19,17 +19,14 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Spacer().frame(height: 100)
+                Spacer()
                 
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
+                Image("sucuri_logo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 200)
                 
-                Text("Sucuri e-commerce")
-                    .font(.title)
-                    .bold()
-                
-                Spacer().frame(height:200)
+                Spacer().frame(height:20)
                 TextField("Digite seu usuário", text: $usernameDigitado)
                     .textFieldStyle(.roundedBorder)
                     .autocorrectionDisabled(true)
@@ -45,7 +42,7 @@ struct ContentView: View {
                         .bold()
                         .frame(maxWidth: 150)
                         .padding()
-                        .background(Color.orange)
+                        .background(Color.green)
                         .foregroundColor(.white)
                         .cornerRadius(75)
                 }

@@ -24,13 +24,24 @@ struct TelaDeRegistro: View {
                 .font(.title)
                 .bold()
             Spacer()
+            Image("sucuri_logo")
+                .resizable()
+                .scaledToFit()
+                .frame(height: 250)
             TextField("Digite seu usuário", text: $usernameDigitado)
                 .textFieldStyle(.roundedBorder)
                 .autocorrectionDisabled(true)
                 .textInputAutocapitalization(.never)
+                .padding(.horizontal, 30)
             
-            SecureField("Digite sua senha", text: $passwordDigitada)
+            SecureField("Digite a senha", text: $passwordDigitada)
                 .textFieldStyle(.roundedBorder)
+                .padding(.horizontal, 30)
+            
+            SecureField("Digite a senha novamente", text: $passwordDigitada)
+                .textFieldStyle(.roundedBorder)
+                .padding(.horizontal, 30)
+            Spacer()
             
             
             Button(action: {
@@ -40,7 +51,7 @@ struct TelaDeRegistro: View {
                     .bold()
                     .frame(maxWidth: 150)
                     .padding()
-                    .background(Color.orange)
+                    .background(Color.green)
                     .foregroundColor(.white)
                     .cornerRadius(75)
             }
